@@ -1,3 +1,5 @@
+# Local Docker setup config
+
 ### Other
 1. To generate a secure random secret key use the command: `openssl rand -hex 256`
 2. add execute permission to a file: `sudo chmod +x ./file.sh`

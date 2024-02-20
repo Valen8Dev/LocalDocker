@@ -1,0 +1,9 @@
+# Tests
+coverage
+pytest
+locust
+
+# Code
+black
+
+# Other

@@ -1,0 +1,44 @@
+version: "3.7"
+
+services:
+
+  postgres:
+    image: postgres:15
+    container_name: some-postgres
+    ports:
+      - "5432:5432"
+    restart: always
+    networks:
+      - backend
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+
+  redis:
+    image: redis:latest
+    container_name: some-redis
+    ports:
+      - "6379:6379"
+    restart: always
+    networks:
+      - backend
+    command: >
+      --requirepass guest
+
+#  rabbitmq:
+#    image: rabbitmq:3-management
+#    container_name: some-rabbitmq
+#    ports:
+#      - "5672:5672"
+#      - "15672:15672"
+#    restart: always
+#    networks:
+#      - backend
+#    environment:
+#      - RABBITMQ_DEFAULT_USER=guest
+#      - RABBITMQ_DEFAULT_PASS=guest
+
+networks:
+  backend:
+    driver: bridge
+    name: "local-dev-compose-net"

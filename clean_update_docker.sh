@@ -13,7 +13,7 @@ echo "--- Remove build cache ---"
 docker builder prune -f
 
 echo "--- Update PostgreSQL image ---"
-docker pull postgres:15
+docker pull postgres:16
 
 echo "--- Update Redis image ---"
 docker pull redis:latest

@@ -21,4 +21,7 @@ docker pull redis:latest
 #echo "--- Update RabbitMQ management image ---"
 #docker pull rabbitmq:3-management
 
+echo "--- Update Ollama image ---"
+docker pull ollama/ollama:latest
+
 echo "--- Done ---"

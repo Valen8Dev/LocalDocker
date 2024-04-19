@@ -3,7 +3,7 @@ version: "3.8"
 services:
 
   ollama_gpu:
-    image: ollama/ollama
+    image: ollama/ollama:latest
     container_name: ollama-gpu
     ports:
       - "11434:11434"
@@ -21,7 +21,7 @@ services:
               capabilities: [ gpu ]
 
   ollama_cpu:
-    image: ollama/ollama
+    image: ollama/ollama:latest
     container_name: ollama-cpu
     ports:
       - "11435:11434"

@@ -317,4 +317,4 @@ dmypy.json
 cython_debug/
 
 ollama/*
-data/*
+hf_data/*

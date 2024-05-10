@@ -16,7 +16,7 @@
 ```shell
 #model=meta-llama/Meta-Llama-3-8B
 model=google/gemma-7b
-volume=$PWD/data
+volume=$PWD/hf_data
 token=hf_your_key
 docker run -d --name hf-tgi --gpus all --shm-size 1g -p 11436:80 -e HUGGING_FACE_HUB_TOKEN=$token -v $volume:/data ghcr.io/huggingface/text-generation-inference:latest --model-id $model
 ```

@@ -16,7 +16,7 @@ services:
     command: -c 'max_connections=10000'
 
   redis:
-    image: redis:latest
+    image: redis:7
     container_name: some-redis
     ports:
       - "6379:6379"

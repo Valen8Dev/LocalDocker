@@ -16,7 +16,7 @@ echo "--- Update PostgreSQL image ---"
 docker pull postgres:16
 
 echo "--- Update Redis image ---"
-docker pull redis:latest
+docker pull redis:7
 
 #echo "--- Update RabbitMQ management image ---"
 #docker pull rabbitmq:3-management

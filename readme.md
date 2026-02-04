@@ -6,6 +6,7 @@
 
 - PostgreSQL: https://hub.docker.com/_/postgres
 - Redis: https://hub.docker.com/_/redis
+-
 
 ### Run DataBases
 
@@ -27,6 +28,14 @@ docker compose -f ./docker-compose-databases.yml up -d
 ```shell
 docker compose -f ./docker-compose-ollama.yml up -d
 ```
+
+### Pull model
+
+- ```ollama run gemma3:4b```
+- ```ollama run deepseek-r1:8b```
+- ```ollama run llama3.1:8b```
+- ```ollama run translategemma:latest```
+-
 
 -----
 

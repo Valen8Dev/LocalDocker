@@ -1,29 +1,39 @@
 # Local Docker setup
 
+-----
+
+## DataBases
+
+- PostgreSQL: https://hub.docker.com/_/postgres
+- Redis: https://hub.docker.com/_/redis
+
+### Run DataBases
+
+```shell
+docker compose -f ./docker-compose-databases.yml up -d
+```
+
+-----
+
 ## Ollama
+
 - Website: https://ollama.com/
 - Docker: https://hub.docker.com/r/ollama/ollama
 - GitHub: https://github.com/ollama
+-
 
+### Run Ollama
 
-## HuggingFace TGI
-- https://github.com/huggingface/text-generation-inference
-- https://huggingface.co/docs/text-generation-inference/en/quicktour
-
-
-#### 
 ```shell
-#model=meta-llama/Meta-Llama-3-8B
-model=google/gemma-7b
-volume=$PWD/hf_data
-token=hf_your_key
-docker run -d --name hf-tgi --gpus all --shm-size 1g -p 11436:80 -e HUGGING_FACE_HUB_TOKEN=$token -v $volume:/data ghcr.io/huggingface/text-generation-inference:latest --model-id $model
+docker compose -f ./docker-compose-ollama.yml up -d
 ```
 
-## generate random key
+-----
+
+## Other
+
+### generate random key
+
 ```shell
 openssl rand -hex 16
 ```
-
-## tba
-

@@ -3,8 +3,8 @@ name: local_db
 services:
 
   postgres:
-    image: postgres:16
-    container_name: some-postgres
+    image: postgres:18
+    container_name: local-postgres
     ports:
       - "5432:5432"
     restart: always
@@ -16,8 +16,8 @@ services:
     command: -c 'max_connections=10000'
 
   redis:
-    image: redis:7
-    container_name: some-redis
+    image: redis:8
+    container_name: local-redis
     ports:
       - "6379:6379"
     restart: always
@@ -28,7 +28,7 @@ services:
 
 #  rabbitmq:
 #    image: rabbitmq:3-management
-#    container_name: some-rabbitmq
+#    container_name: local-rabbitmq
 #    ports:
 #      - "5672:5672"
 #      - "15672:15672"

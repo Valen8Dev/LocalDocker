@@ -13,10 +13,10 @@ echo "--- Remove build cache ---"
 docker builder prune -f
 
 echo "--- Update PostgreSQL image ---"
-docker pull postgres:16
+docker pull postgres:18
 
 echo "--- Update Redis image ---"
-docker pull redis:7
+docker pull redis:8
 
 #echo "--- Update RabbitMQ management image ---"
 #docker pull rabbitmq:3-management

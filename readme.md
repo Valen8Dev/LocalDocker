@@ -35,6 +35,7 @@ docker compose -f ./docker-compose-ollama.yml up -d
 - ```ollama run deepseek-r1:8b```
 - ```ollama run llama3.1:8b```
 - ```ollama run translategemma:latest```
+- ```ollama run ministral-3:8b```
 -
 
 -----

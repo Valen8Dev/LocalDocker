@@ -15,6 +15,9 @@ docker builder prune -f
 echo "--- Update PostgreSQL image ---"
 docker pull postgres:18
 
+echo "--- Update pgAdmin image ---"
+docker pull dpage/pgadmin4
+
 echo "--- Update Redis image ---"
 docker pull redis:8
 

@@ -15,6 +15,20 @@ services:
       - POSTGRES_USER=postgres
     command: -c 'max_connections=10000'
 
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: local-pgadmin
+    ports:
+      - "5050:80"
+    restart: always
+    networks:
+      - backend
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: adminpassword
+    depends_on:
+      - postgres
+
   redis:
     image: redis:8
     container_name: local-redis
@@ -43,3 +57,6 @@ networks:
   backend:
     driver: bridge
     name: "local-db-net"
+
+volumes:
+  pgdata:
